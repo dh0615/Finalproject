@@ -1,0 +1,73 @@
+/* variables */
+/* common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* body */
+body {
+  width: 100%;
+  background: #0e0b14;
+}
+
+#container {
+  width: 90%;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* header */
+.header a {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  padding: 10px 14px;
+  border: 1px solid #f9f9f9;
+  color: #f9f9f9;
+  transition: all 0.2s;
+  font-size: 18px;
+}
+.header a:hover {
+  background: #f9f9f9;
+  color: #0e0b14;
+}
+
+/* slide */
+.slide {
+  position: relative;
+  height: 100%;
+}
+.slide .slide-cont {
+  border: 1px solid #f00;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  color: #f9f9f9;
+}
+.slide .slide-cont .logo img {
+  width: 180px;
+}
+.slide .slide-cont h1 {
+  font-size: 44px;
+  margin-top: 24px;
+}
+.slide .slide-cont .subscribe {
+  display: flex;
+  margin-top: 24px;
+}
+.slide .slide-cont .subscribe .standard {
+  border: 1px solid blueviolet;
+}/*# sourceMappingURL=style.css.map */
