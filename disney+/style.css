@@ -22,7 +22,7 @@ body {
 }
 
 #container {
-  width: 90%;
+  width: 100%;
   position: relative;
   margin: 0 auto;
 }
@@ -30,13 +30,16 @@ body {
 /* header */
 .header a {
   position: absolute;
-  top: 10px;
-  right: 0px;
+  top: 2%;
+  right: 4%;
+  transform: translate(-20%, -10%);
   padding: 10px 14px;
   border: 1px solid #f9f9f9;
   color: #f9f9f9;
   transition: all 0.2s;
   font-size: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
 }
 .header a:hover {
   background: #f9f9f9;
@@ -46,13 +49,19 @@ body {
 /* slide */
 .slide {
   position: relative;
-  height: 100%;
+  width: 100%;
+  height: 1304px;
+  border: 1px solid #ff0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .slide .slide-cont {
   border: 1px solid #f00;
   position: absolute;
+  left: 10%;
   top: 50%;
-  transform: translateY(50%);
+  transform: translate(-10%, -50%);
   display: flex;
   flex-direction: column;
   color: #f9f9f9;
@@ -66,8 +75,15 @@ body {
 }
 .slide .slide-cont .subscribe {
   display: flex;
+  justify-content: space-between;
   margin-top: 24px;
 }
 .slide .slide-cont .subscribe .standard {
   border: 1px solid blueviolet;
+}
+.slide .slide-cont .subscribe .premium {
+  border: 1px solid yellowgreen;
+}
+.slide .slide-cont .slide-cont-bottom {
+  margin: 24px 0;
 }/*# sourceMappingURL=style.css.map */
