@@ -54,7 +54,7 @@ body {
 .slide {
   position: relative;
   width: 100%;
-  height: 1304px;
+  min-width: 1025px;
   border: 1px solid #ff0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -82,6 +82,11 @@ body {
       margin-top: 24px;
       .standard {
         border: 1px solid blueviolet;
+        h2 {
+          font-weight: bold;
+        }
+        p {
+        }
       }
       .premium {
         border: 1px solid yellowgreen;
