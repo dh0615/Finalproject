@@ -473,7 +473,7 @@ body {
   font-size: 15px;
 }
 .user-shortcut .detail a::after {
-  display: none;
+  display: block;
 }
 .user-shortcut a span {
   margin-left: 8px;
