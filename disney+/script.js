@@ -26,7 +26,7 @@ const changeImg = () => {
   pagers[i].classList.add("active");
   src.value = `./slide/${pics[i]}`;
 };
-
+/* 
 setInterval(() => {
   changeImg();
-}, 3000);
+}, 3000); */
