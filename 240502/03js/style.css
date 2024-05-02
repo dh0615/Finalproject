@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s /* ease-out */;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 150px; /* 이 값은 콘텐츠의 실제 높이에 따라 조정해야 할 수 있습니다. */
+}

@@ -164,7 +164,7 @@ body {
     border: 1px solid #f00;
     margin: 0 auto;
     width: 90%;
-    por h2 {
+    h2 {
       color: $fontColorWhite;
       text-align: center;
       font-size: 36px;
@@ -172,10 +172,15 @@ body {
     }
     .poster-container {
       border: 1px solid green;
-      .poster01 {
+      position: relative;
+      .poster {
         width: 100%;
         display: flex;
-        flex: 1;
+        justify-content: center;
+        align-items: center;
+        .poster01 {
+          flex: 3;
+        }
       }
     }
   }

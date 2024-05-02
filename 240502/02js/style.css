@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: #ffeb60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.faq-inner {
+  width: 750px;
+}
+.faq-inner h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.accordian-item {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.2);
+}
+.accordian-item .title {
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+.accordian-item .title::after {
+  content: "\f107";
+  font-family: fontawesome;
+  float: right;
+}
+.accordian-item .title.active {
+  padding-bottom: 15px;
+}
+.accordian-item .title.active::after {
+  transform: rotateX(180deg);
+}
+.accordian-item .content {
+  border-top: 1px solid #000;
+  padding-top: 12px;
+  display: none;
+}

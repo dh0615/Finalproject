@@ -156,7 +156,7 @@ body {
   margin: 0 auto;
   width: 90%;
 }
-#container .contents por h2 {
+#container .contents h2 {
   color: #f9f9f9;
   text-align: center;
   font-size: 36px;
@@ -164,9 +164,14 @@ body {
 }
 #container .contents .poster-container {
   border: 1px solid green;
+  position: relative;
 }
-#container .contents .poster-container .poster01 {
+#container .contents .poster-container .poster {
   width: 100%;
   display: flex;
-  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+#container .contents .poster-container .poster .poster01 {
+  flex: 3;
 }/*# sourceMappingURL=style.css.map */
