@@ -33,9 +33,8 @@ body {
   .header {
     a {
       position: absolute;
-      top: 2%;
-      right: 4%;
-      transform: translate(-20%, -10%);
+      top: 0.5em;
+      right: 2em;
       padding: 10px 14px;
       border: 1px solid $fontColorWhite;
       color: $fontColorWhite;
@@ -54,6 +53,7 @@ body {
     position: relative;
     width: 100%;
     min-width: 1025px;
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -161,28 +161,101 @@ body {
   }
   /* popular-contents */
   .contents {
-    border: 1px solid #f00;
     margin: 0 auto;
     width: 90%;
     h2 {
       color: $fontColorWhite;
       text-align: center;
       font-size: 36px;
-      margin: 24px 0 12px;
+      margin: 50px 0 12px;
     }
     .poster-container {
-      border: 1px solid green;
+      width: 100%;
+
       position: relative;
       .poster {
-        width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        .poster01 {
-          flex: 3;
+        flex-wrap: wrap;
+        img {
+          flex: 1 0 30%;
+          max-width: 32.5%;
+          /* width: 100%; */
+          height: auto;
+          margin-bottom: 1%;
         }
       }
     }
   }
-  /* original-contents */
+  /* banner01 */
+  .banner {
+    width: 90%;
+    margin: 0 auto;
+    padding: 5.6vw 0;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    .banner-cont {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      gap: 24px;
+      position: relative;
+      flex: 1;
+      h3 {
+        font-size: 28px;
+        font-weight: 500;
+      }
+    }
+    .banner-cont-01,
+    .banner-cont-02,
+    .banner-cont-03 {
+      border-right: 1px solid #fff;
+    }
+    /* .banner-cont-02::after,
+    .banner-cont-03::after,
+    .banner-cont-04::after {
+      content: "";
+      display: block;
+      background: $fontColorWhite;
+      width: 1px;
+      height: 80px;
+      position: absolute;
+      left: -25%;
+      transform: translateX(25%);
+    } */
+  }
+  /* membership */
+  .membership-container {
+    border: 1px solid #f00;
+    max-width: 992px;
+    margin: 0 auto;
+    h2 {
+      color: $fontColorWhite;
+      font-size: 40px;
+      text-align: center;
+      margin: 24px;
+    }
+    p {
+      color: $fontColorGrey;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .membership-inner {
+      border: 1px solid #ff0;
+      display: flex;
+      .membership-cont-title {
+        width: 40%;
+      }
+      .membership-cont-desc {
+        width: 30%;
+        border: 1px solid cadetblue;
+        h3 {
+          color: $fontColorWhite;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
