@@ -228,7 +228,6 @@ body {
   }
   /* membership */
   .membership-container {
-    border: 1px solid #f00;
     max-width: 992px;
     margin: 0 auto;
     h2 {
@@ -243,17 +242,63 @@ body {
       margin-bottom: 24px;
     }
     .membership-inner {
-      border: 1px solid #ff0;
       display: flex;
+      /* padding: 33px 8px; */
       .membership-cont-title {
         width: 40%;
+        line-height: 5rem;
+
+        color: $fontColorWhite;
       }
       .membership-cont-desc {
         width: 30%;
-        border: 1px solid cadetblue;
         h3 {
           color: $fontColorWhite;
           text-align: center;
+          font-size: 20px;
+        }
+        p {
+          margin-top: 12px;
+        }
+      }
+    }
+    .membership-inner01 {
+      position: sticky;
+      top: 0px;
+      background: $backgroundColor;
+
+      border-bottom: 1px solid $fontColorWhite;
+      .membership-cont-desc {
+        border-top: 2px solid #ffffff1a;
+        padding: 20px 12px;
+        h3 {
+          font-size: 20px;
+        }
+        p {
+          height: 50px;
+          max-width: 260px;
+          padding: 14px 14px;
+          margin: 10px auto;
+          background: #02d6e8;
+          color: $backgroundColor;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .membership-inner02 {
+      .membership-cont-desc {
+        h3 {
+          height: 50px;
+          max-width: 260px;
+          padding: 14px 14px;
+          margin: 10px auto;
+          color: $fontColorWhite;
+          border: 1px solid $fontColorWhite;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        p {
         }
       }
     }

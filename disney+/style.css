@@ -217,7 +217,6 @@ body {
   border-right: 1px solid #fff;
 }
 #container .membership-container {
-  border: 1px solid #f00;
   max-width: 992px;
   margin: 0 auto;
 }
@@ -233,17 +232,54 @@ body {
   margin-bottom: 24px;
 }
 #container .membership-container .membership-inner {
-  border: 1px solid #ff0;
   display: flex;
+  /* padding: 33px 8px; */
 }
 #container .membership-container .membership-inner .membership-cont-title {
   width: 40%;
+  line-height: 5rem;
+  color: #f9f9f9;
 }
 #container .membership-container .membership-inner .membership-cont-desc {
   width: 30%;
-  border: 1px solid cadetblue;
 }
 #container .membership-container .membership-inner .membership-cont-desc h3 {
   color: #f9f9f9;
   text-align: center;
+  font-size: 20px;
+}
+#container .membership-container .membership-inner .membership-cont-desc p {
+  margin-top: 12px;
+}
+#container .membership-container .membership-inner01 {
+  position: sticky;
+  top: 0px;
+  background: #0e0b14;
+  border-bottom: 1px solid #f9f9f9;
+}
+#container .membership-container .membership-inner01 .membership-cont-desc {
+  border-top: 2px solid rgba(255, 255, 255, 0.1019607843);
+  padding: 20px 12px;
+}
+#container .membership-container .membership-inner01 .membership-cont-desc h3 {
+  font-size: 20px;
+}
+#container .membership-container .membership-inner01 .membership-cont-desc p {
+  height: 50px;
+  max-width: 260px;
+  padding: 14px 14px;
+  margin: 10px auto;
+  background: #02d6e8;
+  color: #0e0b14;
+  border-radius: 5px;
+}
+#container .membership-container .membership-inner02 .membership-cont-desc h3 {
+  height: 50px;
+  max-width: 260px;
+  padding: 14px 14px;
+  margin: 10px auto;
+  color: #f9f9f9;
+  border: 1px solid #f9f9f9;
+  border-radius: 5px;
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
