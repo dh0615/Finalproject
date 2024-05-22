@@ -172,7 +172,7 @@ const Nav = () => {
                     spy={true}
                     smooth={true}
                     /* offset={-70} */
-                    duration={500}
+                    duration={100}
                   >
                     Skill
                   </Link>
@@ -184,8 +184,8 @@ const Nav = () => {
                     to="portfolio"
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={500}
+                    /* offset={-70} */
+                    duration={100}
                   >
                     Portfolio
                   </Link>
@@ -197,8 +197,8 @@ const Nav = () => {
                     to="clone"
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={500}
+                    /* offset={-70} */
+                    duration={100}
                   >
                     Clone
                   </Link>
@@ -210,8 +210,8 @@ const Nav = () => {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    offset={-70}
-                    duration={500}
+                    /* offset={-70} */
+                    duration={100}
                   >
                     Contact
                   </Link>

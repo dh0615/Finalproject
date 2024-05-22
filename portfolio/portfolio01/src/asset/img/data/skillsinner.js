@@ -1,13 +1,13 @@
-import photoshopImg from "../asset/img/photoshop.png";
-import illustratorImg from "../asset/img/Illustrator.png";
-import figmaImg from "../asset/img/Figma.png";
-import gitslackImg from "../asset/img/gitslack.png";
-import jqueryImg from "../asset/img/jquery.png";
-import firebaseImg from "../asset/img/Firebase.png";
-import htmlImg from "../asset/img/HTML5.png";
-import cssImg from "../asset/img/CSS3.png";
-import scssImg from "../asset/img/scss.png";
-import javascriptImg from "../asset/img/JavaScript.png";
+import photoshopImg from "../photoshop.png";
+import illustratorImg from "../Illustrator.png";
+import figmaImg from "../Figma.png";
+import gitslackImg from "../gitslack.png";
+import jqueryImg from "../jquery.png";
+import firebaseImg from "../Firebase.png";
+import htmlImg from "../HTML5.png";
+import cssImg from "../CSS3.png";
+import scssImg from "../scss.png";
+import javascriptImg from "../JavaScript.png";
 
 export const skills = [
   {
@@ -55,7 +55,7 @@ export const skills = [
   {
     id: 8,
     img: cssImg,
-    img: scssImg,
+
     title: "css3 / scss",
     desc: "Html 문서를 바탕으로 flex, grid을 비롯한 다양한 선택자를 이용하여 스타일을 적용할 수 있습니다.",
   },

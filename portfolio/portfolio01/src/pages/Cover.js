@@ -57,26 +57,44 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
+  width: 100%;
+  max-width: 800px;
+  height: auto;
   margin-top: 20px;
   text-align: center;
   max-width: 50%;
+  img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    @media (max-width: 768px) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+    }
+  }
   p {
     width: 100%;
     max-width: 500px;
     height: auto;
     border: 1px solid #f00;
-    margin-top: 10px;
+    margin: 10px auto;
   }
   @media (max-width: 768px) {
     p {
       max-width: 300px;
+      position: absolute;
+      bottom: 10px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      gap: 50px;
+      margin: 20px 0;
     }
   }
-`;
-
-const Img = styled.img`
-  width: 100%;
-  height: auto;
+  .descInner {
+  }
 `;
 
 const Cover = () => {
@@ -91,10 +109,10 @@ const Cover = () => {
       </Title>
 
       <Desc>
-        <Img src={coverImg} alt="coverimg" />
-        <p>설명..</p>
-        <p>scroll down</p>
-        <div className="scrollDown">
+        <img src={coverImg} alt="coverimg" />
+        <div className="descInner">
+          <p>설명..</p>
+          <p>scroll down</p>
           <FontAwesomeIcon icon={faAngleDown} />
         </div>
       </Desc>
