@@ -11,9 +11,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   margin: 0 auto;
-  background: #ccc;
+  background: #fffeee;
   padding: 20px;
 
   @media (min-width: 768px) {
@@ -26,32 +26,39 @@ const Title = styled.div`
   max-width: 50%;
   color: #000;
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-weight: 100;
+  font-size: 7vw;
   position: relative;
   z-index: 1;
-
+  color: #063dcc;
   span {
-    font-family: "Prata", serif;
-    font-size: 4rem;
-    font-weight: normal;
+    font-family: "Cormorant", serif;
+    font-size: 7vw;
+    font-weight: bold;
     letter-spacing: 2px;
-    border-bottom: 2px solid #f00;
   }
   p:nth-of-type(2) {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 600;
+    font-size: 4.5vw;
+    font-weight: 100;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.5rem;
+    font-size: 3vw;
     span {
-      font-size: 3rem;
+      font-size: 5vw;
     }
     p:nth-of-type(2) {
-      font-size: 0.8rem;
+      font-size: 2.5vw;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 5vw;
+    span {
+      font-size: 5vw;
+    }
+    p:nth-of-type(2) {
+      font-size: 3vw;
     }
   }
 `;

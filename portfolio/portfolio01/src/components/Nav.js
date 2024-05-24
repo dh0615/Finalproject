@@ -1,69 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import ProgressBar from "react-bootstrap/ProgressBar";
-import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
-import About from "../pages/About";
-import Skill from "../pages/Skill";
-import Portfolio from "../pages/Portfolio";
-import Clone from "../pages/Clone";
-import Contact from "../pages/Contact";
-
-// const Wrapper = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   background: grey;
-// `;
-
-// const Header = styled.div`
-//   width: 100%;
-//   height: 60px;
-//   background: pink;
-//   margin: 0 auto;
-
-// `;
-
-// const LogoImg = styled.div`
-//   width: 100px;
-//   height: 60px;
-//   background: green;
-// `;
-
-// const MenuBar = styled.div`
-// width : 90%;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin: 0 auto;
-//   .toggle{
-//     display:block;
-//   }
-//   .headerMenuList {
-//     display: ${(props) => (props.isToggled ? "flex" : "none")};
-//     justify-content: space-around;
-//     align-items: center;
-//     border: 1px solid #f00;
-//     gap: 20px;
-//     flex-direction: column;
-//     width: 100%;
-//     background-color: black;
-//   }
-// `;
 
 const Wrapper = styled.div``;
+
 const Header = styled.div`
-  max-width: 1920px;
-  margin: 0 auto;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  padding: 0 20px;
   background-color: black;
+  z-index: 1000;
+  color: white;
 
-  .logo {
-    margin: 0.1rem;
-    font-size: 2rem;
+  .toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 
   .headerMenuList {
@@ -72,159 +33,103 @@ const Header = styled.div`
   }
 
   li {
-    padding: 0 1rem;
-  }
-
-  .toggle {
-    display: none;
-    font-size: 1.5rem;
-    padding: 1rem 1rem;
+    margin: 0 10px;
   }
 
   @media screen and (max-width: 768px) {
-    flex-wrap: wrap;
+    .toggle {
+      display: block;
+    }
 
     .headerMenuList {
       display: ${(props) => (props.toggleMenu ? "flex" : "none")};
       flex-direction: column;
       width: 100%;
       background-color: black;
+      position: absolute;
+      top: 60px;
+      left: 0;
     }
 
-    .headerMenuList li {
-      margin: 1rem 0;
-      padding: 0;
-    }
-
-    .toggle {
-      display: block;
+    li {
+      margin: 10px 0;
     }
   }
 `;
-const MenuBar = styled.div``;
-const LogoImg = styled.div``;
+
+const LogoImg = styled.div`
+  width: 100px;
+  height: 60px;
+  background-color: green;
+`;
 
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.body.scrollHeight;
+      const progress = (scrollTop / (fullHeight - windowHeight)) * 100;
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    // <Router>
-    //   <div>
-    //     <nav>
-    //       <ul>
-    //         <li>
-    //           <Link to="/about">About</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/skill">Skill</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/portfolio">Portfolio</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/clone">Clone</Link>
-    //         </li>
-    //         <li>
-    //           <Link to="/contact">Contact</Link>
-    //         </li>
-    //       </ul>
-    //     </nav>
-    //     <Routes>
-    //       <Route path="/about" element={<About />} />
-    //       <Route path="/skill" element={<Skill />} />
-    //       <Route path="/portfolio" element={<Portfolio />} />
-    //       <Route path="/clone" element={<Clone />} />
-    //       <Route path="/contact" element={<Contact />} />
-    //     </Routes>
-    //   </div>
-    // </Router>
     <div>
       <Wrapper>
         <Header toggleMenu={toggleMenu}>
-          <MenuBar>
-            <LogoImg></LogoImg>
-            <div
-              className="toggle"
-              onClick={() => {
-                setToggleMenu(!toggleMenu);
-              }}
-            >
-              <FontAwesomeIcon icon={!toggleMenu ? faBars : faX} />
-            </div>
-            <ul className="headerMenuList">
-              <li>
-                <a href="#about">
-                  <Link
-                    to="about"
-                    spy={true}
-                    smooth={true}
-                    /* offset={-70} */
-                    duration={100}
-                  >
-                    About
-                  </Link>
-                </a>
-              </li>
-              <li>
-                <a href="#skill">
-                  <Link
-                    to="skill"
-                    spy={true}
-                    smooth={true}
-                    /* offset={-70} */
-                    duration={100}
-                  >
-                    Skill
-                  </Link>
-                </a>
-              </li>
-              <li>
-                <a href="#portfolio">
-                  <Link
-                    to="portfolio"
-                    spy={true}
-                    smooth={true}
-                    /* offset={-70} */
-                    duration={100}
-                  >
-                    Portfolio
-                  </Link>
-                </a>
-              </li>
-              <li>
-                <a href="#clone">
-                  <Link
-                    to="clone"
-                    spy={true}
-                    smooth={true}
-                    /* offset={-70} */
-                    duration={100}
-                  >
-                    Clone
-                  </Link>
-                </a>
-              </li>
-              <li>
-                <a href="#contact">
-                  <Link
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    /* offset={-70} */
-                    duration={100}
-                  >
-                    Contact
-                  </Link>
-                </a>
-              </li>
-            </ul>
-          </MenuBar>
+          <LogoImg />
+          <div
+            className="toggle"
+            onClick={() => {
+              setToggleMenu(!toggleMenu);
+            }}
+          >
+            <FontAwesomeIcon icon={toggleMenu ? faTimes : faBars} />
+          </div>
+          <ul className="headerMenuList">
+            <li>
+              <Link to="about" spy={true} smooth={true} duration={500}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="skill" spy={true} smooth={true} duration={500}>
+                Skill
+              </Link>
+            </li>
+            <li>
+              <Link to="portfolio" spy={true} smooth={true} duration={500}>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link to="clone" spy={true} smooth={true} duration={500}>
+                Clone
+              </Link>
+            </li>
+            <li>
+              <Link to="contact" spy={true} smooth={true} duration={500}>
+                Contact
+              </Link>
+            </li>
+          </ul>
         </Header>
       </Wrapper>
       <ProgressBar
-        striped
-        variant="danger"
-        /* now={(questionNo / QuestionData.length) * 100} */
+        animated
+        variant="info"
+        now={scrollProgress}
+        style={{ position: "fixed", top: "60px", left: 0, width: "100%" }}
       />
     </div>
   );
