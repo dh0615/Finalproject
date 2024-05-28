@@ -4,7 +4,7 @@ import skills from "../asset/img/data/skillsinner";
 
 const Wrapper = styled.div`
   padding: 20px;
-  /* height: 100vh; */
+  min-height: 100vh;
   background: #fff;
 `;
 const Title = styled.h1`
