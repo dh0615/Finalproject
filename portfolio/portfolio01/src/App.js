@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); //    font-family: "Lora", serif;
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');// font-family: "Prata", serif;
 @import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap'); //  font-family: "Hahmlet", serif;
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap'); // font-family: "Nanum Gothic", sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');  // font-family: "Cormorant", serif;
 
 
@@ -38,7 +39,6 @@ function App() {
       <Nav />
       <Cover />
       <About />
-      <Skill />
       <Portfolio />
       <Clone />
       <Contact />

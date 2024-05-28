@@ -23,7 +23,7 @@ const SkillInner = styled.div`
   border: 1px solid #ddd;
   border-radius: 20px;
   width: calc(33% - 20px);
-  padding: 15px 0;
+  padding: 15px 15px 0;
   margin-bottom: 20px;
 
   text-align: center;

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import ProgressBar from "react-bootstrap/ProgressBar";
 
 const Wrapper = styled.div``;
 
@@ -65,73 +64,77 @@ const LogoImg = styled.div`
 
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const fullHeight = document.body.scrollHeight;
-      const progress = (scrollTop / (fullHeight - windowHeight)) * 100;
-      setScrollProgress(progress);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div>
-      <Wrapper>
-        <Header toggleMenu={toggleMenu}>
-          <LogoImg />
-          <div
-            className="toggle"
-            onClick={() => {
-              setToggleMenu(!toggleMenu);
-            }}
-          >
-            <FontAwesomeIcon icon={toggleMenu ? faTimes : faBars} />
-          </div>
-          <ul className="headerMenuList">
-            <li>
-              <Link to="about" spy={true} smooth={true} duration={500}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="skill" spy={true} smooth={true} duration={500}>
-                Skill
-              </Link>
-            </li>
-            <li>
-              <Link to="portfolio" spy={true} smooth={true} duration={500}>
-                Portfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="clone" spy={true} smooth={true} duration={500}>
-                Clone
-              </Link>
-            </li>
-            <li>
-              <Link to="contact" spy={true} smooth={true} duration={500}>
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </Header>
-      </Wrapper>
-      <ProgressBar
-        animated
-        variant="info"
-        now={scrollProgress}
-        style={{ position: "fixed", top: "60px", left: 0, width: "100%" }}
-      />
-    </div>
+    <Wrapper>
+      <Header toggleMenu={toggleMenu}>
+        <LogoImg />
+        <div
+          className="toggle"
+          onClick={() => {
+            setToggleMenu(!toggleMenu);
+          }}
+        >
+          <FontAwesomeIcon icon={toggleMenu ? faTimes : faBars} />
+        </div>
+        <ul className="headerMenuList">
+          <li>
+            <Link
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={500}
+            >
+              About
+            </Link>
+          </li>
+          {/* <li>
+            <Link
+              to="skill"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={500}
+            >
+              Skill
+            </Link>
+          </li> */}
+          <li>
+            <Link
+              to="portfolio"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={500}
+            >
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="clone"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={500}
+            >
+              Clone
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-60}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </Header>
+    </Wrapper>
   );
 };
 

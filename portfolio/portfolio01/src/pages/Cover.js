@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import "../App";
-import coverImg from "../asset/img/krtr.jpg";
+import coverImg from "../asset/img/cover.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
