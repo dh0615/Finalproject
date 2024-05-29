@@ -11,11 +11,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  margin: 0 auto;
+  height: calc(100vh - 60px);
+  margin: 60px auto;
   background: #fffeee;
   padding: 20px;
-
   @media (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;

@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { motion, useAnimation, useScroll } from "framer-motion";
 
 const Wrapper = styled.div``;
 
-const Header = styled.div`
+const Header = styled(motion.div)`
   width: 100%;
   height: 60px;
   position: fixed;
@@ -16,9 +17,9 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: black;
   z-index: 1000;
-  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
 
   .toggle {
     display: none;
@@ -32,6 +33,8 @@ const Header = styled.div`
   }
 
   li {
+    height: 60px;
+    line-height: 3.8;
     margin: 0 10px;
   }
 
@@ -39,35 +42,63 @@ const Header = styled.div`
     .toggle {
       display: block;
     }
-
     .headerMenuList {
       display: ${(props) => (props.toggleMenu ? "flex" : "none")};
       flex-direction: column;
       width: 100%;
-      background-color: black;
       position: absolute;
       top: 60px;
       left: 0;
     }
-
     li {
       margin: 10px 0;
     }
   }
 `;
 
-const LogoImg = styled.div`
+const LogoImg = styled(motion.div)`
   width: 100px;
   height: 60px;
   background-color: green;
 `;
 
+const navHeaderVariants = {
+  top: { backgroundColor: "#fffeee" },
+  scroll: { backgroundColor: "#063dcc" },
+};
+const navMenuListVariants = {
+  top: { color: "#063dcc" },
+  scroll: { color: "#fffeee" },
+};
+
 const Nav = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const headerAnimation = useAnimation();
+  const menuListAnimation = useAnimation();
+  const { scrollY } = useScroll();
+
+  useEffect(() => {
+    scrollY.on("change", () => {
+      if (scrollY.get() > 60) {
+        headerAnimation.start("scroll");
+        menuListAnimation.start("scroll");
+      } else {
+        headerAnimation.start("top");
+        menuListAnimation.start("top");
+      }
+    });
+  }, [scrollY]);
   return (
     <Wrapper>
-      <Header toggleMenu={toggleMenu}>
-        <LogoImg />
+      <Header
+        variants={navHeaderVariants}
+        animate={headerAnimation}
+        initial="top"
+        toggleMenu={toggleMenu}
+      >
+        <LogoImg>
+          <Link to="cover" />
+        </LogoImg>
         <div
           className="toggle"
           onClick={() => {
@@ -76,7 +107,12 @@ const Nav = () => {
         >
           <FontAwesomeIcon icon={toggleMenu ? faTimes : faBars} />
         </div>
-        <ul className="headerMenuList">
+        <motion.ul
+          className="headerMenuList"
+          variants={navMenuListVariants}
+          animate={menuListAnimation}
+          initial="top"
+        >
           <li>
             <Link
               to="about"
@@ -88,17 +124,6 @@ const Nav = () => {
               About
             </Link>
           </li>
-          {/* <li>
-            <Link
-              to="skill"
-              spy={true}
-              smooth={true}
-              offset={-60}
-              duration={500}
-            >
-              Skill
-            </Link>
-          </li> */}
           <li>
             <Link
               to="portfolio"
@@ -132,7 +157,7 @@ const Nav = () => {
               Contact
             </Link>
           </li>
-        </ul>
+        </motion.ul>
       </Header>
     </Wrapper>
   );
