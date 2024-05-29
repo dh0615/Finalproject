@@ -81,7 +81,9 @@ const Wrapper = styled.div`
 const Title = styled.div`
   text-align: center;
   padding: 100px 0 50px 0;
+  padding: 100px 0 50px 0;
   font-size: 2.5rem;
+  font-weight: 500;
   font-weight: 500;
   line-height: 1.5;
   color: #063dcc;
@@ -93,11 +95,18 @@ const Info = styled.div`
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
+  justify-content: center;
+  align-items: center;
+  flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
   border: 1px solid green;
+  position: relative;
   position: relative;
 `;
 
