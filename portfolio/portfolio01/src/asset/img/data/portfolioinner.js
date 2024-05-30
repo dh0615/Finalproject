@@ -7,7 +7,7 @@ import project06Img from "../";
 import project07Img from "../";
 import project08Img from "../";
 import project09Img from "../";
-import project010Img from "../";
+import project10Img from "../";
 
 export const works = [
   { id: 1, img: project01Img, title: project01, desc: 1 },
@@ -19,7 +19,7 @@ export const works = [
   { id: 7, img: project07Img, title: project07, desc: 7 },
   { id: 8, img: project08Img, title: project08, desc: 8 },
   { id: 9, img: project09Img, title: project09, desc: 9 },
-  { id: 10, img: project010Img, title: project010, desc: 10 },
+  { id: 10, img: project10Img, title: project10, desc: 10 },
 ];
 
 export default works;

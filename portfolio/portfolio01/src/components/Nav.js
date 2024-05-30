@@ -64,10 +64,10 @@ const LogoImg = styled(motion.div)`
 
 const navHeaderVariants = {
   top: { backgroundColor: "#fffeee" },
-  scroll: { backgroundColor: "#063dcc" },
+  scroll: { backgroundColor: "#3E64AD" },
 };
 const navMenuListVariants = {
-  top: { color: "#063dcc" },
+  top: { color: "#3E64AD" },
   scroll: { color: "#fffeee" },
 };
 

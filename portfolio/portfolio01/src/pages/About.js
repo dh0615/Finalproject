@@ -70,7 +70,7 @@
 
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import innerImg from "../asset/img/aboutimg.jpg";
+import innerImg from "../asset/img/cover.jpg";
 import skills from "../asset/img/data/skillsinner";
 
 const Wrapper = styled.div`
@@ -80,13 +80,11 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   text-align: center;
-  padding: 100px 0 50px 0;
-  padding: 100px 0 50px 0;
+  padding: 50px 0 30px 0;
   font-size: 2.5rem;
   font-weight: 500;
-  font-weight: 500;
   line-height: 1.5;
-  color: #063dcc;
+  color: #3e64ad;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 `;
@@ -95,18 +93,11 @@ const Info = styled.div`
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  width: 100%;
-  max-width: 1800px;
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
-  justify-content: center;
-  align-items: center;
-  flex-direction: ${({ isMobile }) => (isMobile ? "column" : "row")};
   border: 1px solid green;
-  position: relative;
   position: relative;
 `;
 
@@ -145,14 +136,16 @@ const TabButton = styled.button`
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: ${(props) => (props.active ? "#063dcc" : "black")};
+  color: ${(props) => (props.active ? "#3E64AD" : "black")};
 `;
+
+const IntroContainer = styled.div``;
 
 const SkillContainer = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 60px 80px;
+  padding: 50px 80px;
   @media (max-width: 768px) {
     padding: 50px 40px;
   }
@@ -161,22 +154,22 @@ const SkillInner = styled.div`
   border: 1px solid #ddd;
   border-radius: 20px;
   width: calc(33% - 20px);
-  padding: 15px 0;
+  padding: 10px 0;
   margin-bottom: 20px;
   text-align: center;
   img {
     width: 100%;
-    max-width: 130px;
-    height: 130px;
+    max-width: 150px;
+    height: 100px;
     object-fit: contain;
     margin-bottom: 20px;
   }
   h2 {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #063dcc;
+    color: #3e64ad;
     font-family: "Montserrat", sans-serif;
   }
   p {
@@ -260,16 +253,18 @@ const About = () => {
           <Desc isMobile={isMobile}>
             {activeTab === "Introduce" && (
               <>
-                <SubTitle>"You either win or learn"</SubTitle>
-                <p>
-                  위 문장은 취업 준비 기간 동안 저에게 가장 큰 공감을 주고 힘을
-                  준 문장입니다. <br /> 저는 이 기간 동안 여러 경험을 하면서
-                  좌절도 하였지만 그 과정에서 많은 것을 배우게 되었습니다.{" "}
-                  <br /> 실패를 더이상 두려워 하지 않고 스스로 성장할 수 있는
-                  계기로 삼을 수 있게 되었고,
-                  <br /> 이러한 마음가짐은 저를 더 강하고 단단하게 만들어
-                  주었습니다.
-                </p>
+                <IntroContainer>
+                  <SubTitle>"You either win or learn"</SubTitle>
+                  <p>
+                    위 문장은 취업 준비 기간 동안 저에게 가장 큰 공감을 주고
+                    힘을 준 문장입니다. <br /> 저는 이 기간 동안 여러 경험을
+                    하면서 좌절도 하였지만 그 과정에서 많은 것을 배우게
+                    되었습니다. <br /> 실패를 더이상 두려워 하지 않고 스스로
+                    성장할 수 있는 계기로 삼을 수 있게 되었고,
+                    <br /> 이러한 마음가짐은 저를 더 강하고 단단하게 만들어
+                    주었습니다.
+                  </p>
+                </IntroContainer>
               </>
             )}
             {activeTab === "Education" && (

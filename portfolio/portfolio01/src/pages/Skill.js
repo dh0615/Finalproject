@@ -7,11 +7,6 @@ const Wrapper = styled.div`
   min-height: 100vh;
   background: #fff;
 `;
-const Title = styled.h1`
-  font-size: 3rem;
-  margin: 20px 0;
-  text-align: center;
-`;
 
 const SkillContainer = styled.div`
   display: flex;
@@ -22,10 +17,9 @@ const SkillContainer = styled.div`
 const SkillInner = styled.div`
   border: 1px solid #ddd;
   border-radius: 20px;
-  width: calc(33% - 20px);
+  width: calc(30% - 20px);
   padding: 15px 15px 0;
   margin-bottom: 20px;
-
   text-align: center;
   img {
     width: 100%;
@@ -48,9 +42,8 @@ const SkillInner = styled.div`
 
 const Skill = () => {
   return (
-    <div id="skill">
+    <>
       <Wrapper>
-        <Title>Skill</Title>
         <SkillContainer>
           {skills.map((skill) => (
             <SkillInner key={skill.id}>
@@ -61,7 +54,7 @@ const Skill = () => {
           ))}
         </SkillContainer>
       </Wrapper>
-    </div>
+    </>
   );
 };
 
