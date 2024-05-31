@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#dropArea {
+  border: 2px solid #ccc;
+  padding: 150px;
+  margin-bottom: 20px;
+}
+#dropImage {
+  width: 100%;
+  height: auto;
+  display: none;
+}
