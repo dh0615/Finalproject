@@ -1,4 +1,5 @@
-/* import project01Img from "../";
+import project01Img from "../work01.png";
+/*
 import project02Img from "../";
 import project03Img from "../";
 import project04Img from "../";
@@ -20,7 +21,6 @@ export const works = [
   { id: 8, img: project08Img, title: project08, desc: 8 },
   { id: 9, img: project09Img, title: project09, desc: 9 },
   { id: 10, img: project10Img, title: project10, desc: 10 },
-];
+]; */
 
 export default works;
- */

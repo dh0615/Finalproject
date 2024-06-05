@@ -15,10 +15,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  min-width: 700px;
 }
 #container {
   width: 80%;
+
   padding: 40px 30px;
   display: flex;
   justify-content: space-around;
@@ -59,10 +59,10 @@ body {
 
 .icon span {
   position: absolute;
-  top: -80px;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 150px;
   text-align: center;
   background: #ccc;
   color: #000;

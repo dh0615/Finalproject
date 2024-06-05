@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --yellow-color: #e3db6a;
+  --red-color: #e36a6a;
+  --blue-color: #6ab7e3;
+}
+
+.tabs {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.items {
+  width: 300%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+.items div {
+  width: 33.33%;
+  height: 100vh;
+  float: left;
+  position: relative;
+}
+.items div:nth-child(1) {
+  background: url("./img/jeju.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+.items div:nth-child(2) {
+  background: url("./img/shanghai.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+.items div:nth-child(3) {
+  background: url("./img/tokyo.jpg") center center fixed no-repeat;
+  background-size: cover;
+}
+.items div:nth-child(1)::before,
+.items div:nth-child(2)::before,
+.items div:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.items div:nth-child(1)::before {
+  background: linear-gradient(135deg, var(--yellow-color), transparent);
+}
+.items div:nth-child(2)::before {
+  background: linear-gradient(135deg, var(--red-color), transparent);
+}
+.items div:nth-child(3)::before {
+  background: linear-gradient(135deg, var(--blue-color), transparent);
+}
+.items div h1 {
+  position: relative;
+  font-size: 120px;
+  color: #fff;
+  text-align: center;
+  transform: translateY(-200px);
+  opacity: 0;
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+.items div h1.active {
+  opacity: 1;
+  transform: translateY(200px);
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.pagination {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.pagination.active {
+  border: none;
+  background-color: #fff;
+}
