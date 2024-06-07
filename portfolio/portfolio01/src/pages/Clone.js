@@ -28,9 +28,18 @@ const Clone = () => {
       <Wrapper>
         <Title>03. clone</Title>
         <Info>
-          <CloneOne></CloneOne>
-          <CloneTwo></CloneTwo>
-          <CloneThree></CloneThree>
+          <CloneOne>
+            <h1>disney plus</h1>
+            <span>+</span>
+          </CloneOne>
+          <CloneTwo>
+            <h1>disney plus</h1>
+            <span>+</span>
+          </CloneTwo>
+          <CloneThree>
+            <h1>disney plus</h1>
+            <span>+</span>
+          </CloneThree>
         </Info>
       </Wrapper>
     </div>
