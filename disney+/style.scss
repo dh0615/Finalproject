@@ -126,48 +126,46 @@ body {
         }
       }
     }
-    .slide-pager {
-      width: 60%;
-      position: absolute;
-      left: 50%;
-      bottom: 0;
-      transform: translate(-50%, 0);
-      display: flex;
-      gap: 10px;
-      flex: 1;
-      justify-content: space-between;
-      align-items: center;
-      .pagination {
-        width: 100%;
-        height: 1px;
-        border: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .pagination.active {
-        height: 3px;
-      }
-      .pagination-control {
-        background: transparent;
-        border: none;
-        i {
-          color: $fontColorWhite;
-          font-size: 20px;
-          margin-left: 50px;
-        }
-      }
-    }
-    .slide-info {
-      text-align: center;
-      color: $fontColorWhite;
-      border: 1px solid #f00;
-      p {
-        font-size: 24px;
-        font-weight: bold;
-      }
-    }
     
+  }
+  .slide-pager {
+    width: 50%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(50%, 0);
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    .pagination {
+      width: 100%;
+      height: 1px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pagination.active {
+      height: 3px;
+    }
+    .pagination-control {
+      background: transparent;
+      border: none;
+      i {
+        color: $fontColorWhite;
+        font-size: 20px;
+        margin-left: 50px;
+      }
+    }
+  }
+  .slide-info {
+    text-align: center;
+    color: $fontColorWhite;
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
   }
   /* popular-contents */
   .contents {

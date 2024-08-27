@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/74454cb6c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <!-- main -->
+      <div class="header">
+        <a href="#">로그인</a>
+      </div>
+      <div class="slide-container">
+        <div class="slide">
+          <div class="slide-cont">
+            <div class="logo">
+              <img src="./img/Disney+.png" alt="logo" />
+            </div>
+            <h1>
+              이 모든 이야기가 여기에 <br />
+              지금 스트리밍 중
+            </h1>
+            <div class="subscribe">
+              <div class="standard">
+                <h2>디즈니+ 스탠다드</h2>
+                <p>최대 1080p Full HD 비디오</p>
+                <p>최대 5.1 오디오</p>
+                <p>최대 2대 기기 동시 스트리밍</p>
+                <span>월 ￦9,900</span>
+                <p>(부가세 포함)</p>
+              </div>
+              <div class="premium">
+                <h2>디즈니+ 프리미엄</h2>
+                <p>최대 4K UHD & HDR 비디오</p>
+                <p>최대 Dolby Atmos 오디오</p>
+                <p>최대 4대 기기 동시 스트리밍밍</p>
+                <span>월 ￦13,900</span>
+                <p>(부가세 포함)</p>
+              </div>
+            </div>
+            <div class="slide-cont-bottom">
+              <b>디즈니+ 프리미엄 연간 멤버십</b>
+              <span
+                >을 구독하고 최대 16% 할인*을 받으세요.<br />연간 멤버십을 포함한
+                멤버십
+              </span>
+              <b>유형별 세부 정보</b>
+              <span>를 확인해 보세요.</span>
+            </div>
+            <p>
+              *월간 멤버십 12개월 구독료 대비 할인된 가격입니다. 추가 약관 적용.
+            </p>
+          </div>
+          <div class="slide-pager">
+          <button class="pagination active" data-slide="1"></button>
+          <button class="pagination" data-slide="2"></button>
+          <button class="pagination" data-slide="3"></button>
+          <button class="pagination" data-slide="4"></button>
+          <button class="pagination" data-slide="5"></button>
+          <button class="pagination-control">
+            <i class="fas fa-pause"></i>
+          </button>
+          <!-- 슬라이드 정보 표시 -->
+          <div class="slide-info">
+            <p id="slide-info-text">1</p> <!-- 기본 값 1 -->
+          </div>
+        </div>
+        
+        </div>
+        
+      </div>
+      <!-- popular-contents -->
+      <div class="contents">
+        <h2>인기 컨텐츠</h2>
+        <div class="poster-container">
+          <div class="poster poster01">
+            <img src="./img/수사반장 1958.jpg" alt="" />
+            <img src="./img/지배종.jpg" alt="" />
+            <img src="./img/원더풀 월드.jpg" alt="" />
+          </div>
+          <div class="poster poster02">
+            <img src="./img/범죄도시3.jpg" alt="" />
+            <img src="./img/범죄도시2.jpg" alt="" />
+            <img src="./img/범죄도시.jpg" alt="" />
+          </div>
+          <div class="poster poster03">
+            <img src="./img/카지노.jpg" alt="" />
+            <img src="./img/모던패밀리.jpg" alt="" />
+            <img src="./img/무빙.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- banner01 -->
+      <div class="banner banner01">
+        <div class="banner-cont banner-cont-01">
+          <h3>1,200편 이상의 영화</h3>
+          <p>어워드 수상에 빛나는 블록버스터 및 단독 공개작 포함</p>
+        </div>
+        <div class="banner-cont banner-cont-02">
+          <h3>20,000편 이상의 에피소드</h3>
+          <p>코미디, 드라마, 범죄 실화 등 다양한 장르</p>
+        </div>
+        <div class="banner-cont banner-cont-03">
+          <h3>신규 및 단독 공개 콘텐츠</h3>
+          <p>매주 새로운 영화 및 시리즈 공개</p>
+        </div>
+        <div class="banner-cont banner-cont-04">
+          <h3>다양한 콘텐츠 저장 가능</h3>
+          <p>최대 10대의 기기에서 원하는 콘텐츠를 자유롭게 저장</p>
+        </div>
+      </div>
+
+      <!-- membership -->
+      <div class="membership-container">
+        <h2>원하는 멤버십을 선택하세요.</h2>
+        <p>멤버십은 언제든지 변경 또는 취소* 할 수 있습니다.</p>
+
+        <div class="membership-inner membership-inner01">
+          <div class="membership-cont-title"></div>
+          <div class="membership-cont-desc">
+            <h3>디즈니+ 스탠다드</h3>
+            <p>월 ￦9,900</p>
+          </div>
+          <div class="membership-cont-desc">
+            <h3>디즈니+ 프리미엄</h3>
+            <p>월 ￦13,900</p>
+          </div>
+        </div>
+        <div class="membership-inner membership-inner02">
+          <div class="membership-cont-title">
+            연간 멤버십 구독료 (부가세 포함)
+          </div>
+          <div class="membership-cont-desc">
+            <h3>연 ₩99,000</h3>
+            <p>최대 16% 할인된 가격**</p>
+          </div>
+          <div class="membership-cont-desc">
+            <h3>연 ₩139,000</h3>
+            <p>최대 16% 할인된 가격**</p>
+          </div>
+        </div>
+
+        <div class="membership-inner membership-inner03">
+          <div class="membership-cont-title">영상 화질***</div>
+          <div class="membership-cont-desc">
+            <p>최대 1080p Full HD</p>
+          </div>
+          <div class="membership-cont-desc">
+            <p>최대 4K UHD & HDR</p>
+          </div>
+        </div>
+
+        <div class="membership-inner membership-inner04">
+          <div class="membership-cont-title">오디오***</div>
+          <div class="membership-cont-desc">
+            <p>최대 5.1 사운드</p>
+          </div>
+          <div class="membership-cont-desc">
+            <p>최대 Dolby Atmos 오디오</p>
+          </div>
+        </div>
+
+        <div class="membership-inner membership-inner05">
+          <div class="membership-cont-title">동시 스트리밍</div>
+          <div class="membership-cont-desc">
+            <p>2</p>
+          </div>
+          <div class="membership-cont-desc">
+            <p>4</p>
+          </div>
+        </div>
+
+        <div class="membership-inner membership-inner06">
+          <div class="membership-cont-title">광고</div>
+          <div class="membership-cont-desc">
+            <p>광고 없는 스트리밍</p>
+          </div>
+          <div class="membership-cont-desc">
+            <p>광고 없는 스트리밍</p>
+          </div>
+        </div>
+
+        <div class="membership-inner membership-inner07">
+          <div class="membership-cont-title">동시 스트리밍</div>
+          <div class="membership-cont-desc">
+            <p class="fas fa-check"></p>
+          </div>
+          <div class="membership-cont-desc">
+            <p class="fas fa-check"></p>
+          </div>
+        </div>
+      </div>
+      <!-- banner02 -->
+      <!-- <div class="banner banner02"></div> -->
+      <!-- original-contents -->
+      <div class="contents">
+        <h2>디즈니+ 오리지널과 블록버스터 영화</h2>
+        <p>
+          다른 어디에서도 볼 수 없는 디즈니+ 오리지널을 만나보세요. 디즈니,
+          픽사, 마블, 스타워즈의 최고 인기 영화도 마음껏 즐길 수 있습니다.
+        </p>
+        <div class="poster-container">
+          <div class="poster poster01">
+            <img src="./img/The Simpsons.jpg" alt="" />
+            <img src="./img/Disney+ _ Full Count.jpg" alt="" />
+            <img src="./img/Mandalorian Season 3.jpg" alt="" />
+          </div>
+          <div class="poster poster02">
+            <img src="./img/Guardians of the Galaxy Vol. 3.png" alt="" />
+            <img src="./img/Image - Big Bet.png" alt="" />
+            <img src="./img/Image - Inside Out.png" alt="" />
+          </div>
+          <div class="poster poster03">
+            <img src="./img/Image - Modern Family.jpg" alt="" />
+            <img src="./img/Image - Sand Land_ The Series.png" alt="" />
+            <img src="./img/Image - A Real Bugs Life.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- question -->
+      <!-- <section class="faq">
+        <div class="faq-inner">
+          <h1>자주 묻는 질문</h1>
+          <div class="accordian">
+            <div class="accordion-item">
+              <div class="title">디즈니+는 무엇인가요?</div>
+              <div class="content">
+                디즈니+는 디즈니, 픽사, 마블, 스타워즈, 내셔널지오그래픽, Star의 콘텐츠를 모두 즐길 수 있는 곳입니다. 최신 공개작부터 시대를 초월한 명작과 독점 오리지널에 이르기까지 다양하고 풍성한 콘텐츠를 광고 없이 스트리밍할 수 있습니다.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="title">디즈니+에서 어떤 콘텐츠를 시청할 수 있나요?</div>
+              <div class="content">
+                디즈니+는 새로운 콘텐츠를 계속해서 추가하고 있습니다.<br />
+                ● 최신 공개작과 시대를 초월한 명작 <br />
+                ● 독점 공개하는 새로운 오리지널 영화와 시리즈 <br />
+                ● 흥미진진한 스페셜과 기간 한정 스트리밍되는 특별 콘텐츠 <br />
+                ● 그때 그 시절 추억의 작품과 인기 시리즈의 지난 시즌 에피소드 <br />
+                ● 스카이워커 사가 전체와 대부분의 마블 시네마틱 유니버스 작품<br />
+                ● 인기 단편과 실험적인 단편<br />
+                ● 다큐멘터리, 리얼리티 시리즈 등
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="title">디즈니+를 어디에서 시청할 수 있나요?</div>
+              <div class="content">
+                디즈니+ 앱은 모바일 기기, 웹 브라우저, 게임 콘솔, 셋톱박스, 스마트 TV에서 이용할 수 있습니다. 지원되는 기기의 전체 목록을 보려면 <a href="#">여기를 클릭</a>하세요.
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="title">디즈니+를 얼마에 이용할 수 있나요?</div>
+              <div class="content">
+                디즈니+ 스탠다드(부가세 포함): 월 ₩9,900 / 연 ₩99,000 <br />
+                디즈니+ 프리미엄(부가세 포함): 월 ₩13,900 / 연 ₩139,000
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <div class="accordion">
+        <h1>자주 묻는 질문</h1>
+        <div class="accordion-item">
+          <button class="accordion-button">디즈니+는 무엇인가요?</button>
+          <div class="accordion-content">
+            <p>디즈니+는 디즈니, 픽사, 마블, 스타워즈, 내셔널지오그래픽, Star의
+              콘텐츠를 모두 즐길 수 있는 곳입니다. 최신 공개작부터 시대를 초월한
+              명작과 독점 오리지널에 이르기까지 다양하고 풍성한 콘텐츠를 광고 없이
+              스트리밍할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">디즈니+에서 어떤 콘텐츠를 시청할 수 있나요?</button>
+          <div class="accordion-content">
+            <p>디즈니+는 새로운 콘텐츠를 계속해서 추가하고 있습니다.<br />
+              ● 최신 공개작과 시대를 초월한 명작 <br />
+              ● 독점 공개하는 새로운 오리지널 영화와 시리즈 <br />
+              ● 흥미진진한 스페셜과 기간 한정 스트리밍되는 특별 콘텐츠 <br />
+              ● 그때 그 시절 추억의 작품과 인기 시리즈의 지난 시즌 에피소드
+              <br />
+              ● 스카이워커 사가 전체와 대부분의 마블 시네마틱 유니버스 작품<br />
+              ● 인기 단편과 실험적인 단편
+              <br />
+              ● 다큐멘터리, 리얼리티 시리즈 등</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">디즈니+를 어디에서 시청할 수 있나요?</button>
+          <div class="accordion-content">
+            <p>디즈니+ 앱은 모바일 기기, 웹 브라우저, 게임 콘솔, 셋톱박스, 스마트
+              TV에서 이용할 수 있습니다. 지원되는 기기의 전체 목록을 보려면
+              <a href="https://help.disneyplus.com/ko/article/disneyplus-devices-supported/?utm_source=disneyplus&utm_medium=web&utm_campaign=homepage-FAQ&utm_content=supported-devices" target="_blank" >여기를 클릭</a>하세요.</p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button class="accordion-button">디즈니+를 얼마에 이용할 수 있나요?</button>
+          <div class="accordion-content">
+            <p>디즈니+ 스탠다드(부가세 포함): 월 ₩9,900 / 연 ₩99,000 <br />디즈니+
+              프리미엄(부가세 포함): 월 ₩13,900 / 연 ₩139,000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -120,19 +120,18 @@ body {
   color: #c0c0c0;
   font-size: 16px;
 }
-#container .slide .slide-pager {
-  width: 60%;
-  position: absolute;
+#container .slide-pager {
+  width: 50%;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 0);
+  transform: translate(50%, 0);
   display: flex;
   gap: 10px;
   flex: 1;
   justify-content: space-between;
   align-items: center;
 }
-#container .slide .slide-pager .pagination {
+#container .slide-pager .pagination {
   width: 100%;
   height: 1px;
   border: none;
@@ -140,17 +139,25 @@ body {
   justify-content: center;
   align-items: center;
 }
-#container .slide .slide-pager .pagination.active {
+#container .slide-pager .pagination.active {
   height: 3px;
 }
-#container .slide .slide-pager .pagination-control {
+#container .slide-pager .pagination-control {
   background: transparent;
   border: none;
 }
-#container .slide .slide-pager .pagination-control i {
+#container .slide-pager .pagination-control i {
   color: #f9f9f9;
   font-size: 20px;
   margin-left: 50px;
+}
+#container .slide-info {
+  text-align: center;
+  color: #f9f9f9;
+}
+#container .slide-info p {
+  font-size: 20px;
+  font-weight: bold;
 }
 #container .contents {
   margin: 0 auto;
