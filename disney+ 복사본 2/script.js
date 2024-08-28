@@ -6,12 +6,12 @@ const slideInfoText = document.getElementById("slide-info-text");
 
 const pics = ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg"];
 const infoTexts = [
-  "슬라이드 1: 여기는 첫 번째 슬라이드입니다.",
-  "슬라이드 2: 두 번째 슬라이드의 내용입니다.",
-  "슬라이드 3: 여기서는 세 번째 슬라이드를 볼 수 있습니다.",
-  "슬라이드 4: 네 번째 슬라이드에 오신 것을 환영합니다.",
-  "슬라이드 5: 다섯 번째 슬라이드의 내용입니다.",
-  "슬라이드 6: 마지막 슬라이드입니다."
+  "1 지금 스트리밍 중",
+  "2 지금 스트리밍 중",
+  "3 지금 스트리밍 중",
+  "4 지금 스트리밍 중",
+  "5 지금 스트리밍 중",
+  "6 지금 스트리밍 중."
 ];
 
 const pic = document.createElement("img");
@@ -83,6 +83,72 @@ pausePlayButton.addEventListener("click", () => {
   }
   isPlaying = !isPlaying;
 });
+
+// popular
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.querySelector('.popular');
+  const slides = document.querySelectorAll('.popular-item');
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  let currentIndex = 0;
+  const visibleSlides = 4; // 한 화면에 보여질 슬라이드 개수
+  let slideWidth;
+  const gap = 10; // 이미지 사이의 간격
+
+  function updateSliderDimensions() {
+    const containerWidth = slider.parentElement.offsetWidth; // 부모 요소의 너비
+    slideWidth = (containerWidth - (visibleSlides - 1) * gap) / visibleSlides; // 각 슬라이드의 너비 계산
+
+    slider.style.width = `${(slideWidth + gap) * slides.length - gap}px`; // 슬라이드 컨테이너의 너비 설정
+
+    slides.forEach(slide => {
+      slide.style.width = `${slideWidth}px`; // 각 슬라이드의 너비 설정
+    });
+
+    moveToSlide(currentIndex);
+  }
+
+  function moveToSlide(index) {
+    if (index < 0) index = 0;
+    if (index > slides.length - visibleSlides) index = slides.length - visibleSlides;
+    slider.style.transform = `translateX(-${index * (slideWidth + gap)}px)`; // 슬라이드 이동
+    updateButtonsVisibility();
+  }
+
+  function updateButtonsVisibility() {
+    if (currentIndex <= 0) {
+      prevBtn.classList.remove('show'); // 첫 슬라이드에서는 prev 버튼 숨김
+    } else {
+      prevBtn.classList.add('show');
+    }
+
+    if (currentIndex >= slides.length - visibleSlides) {
+      nextBtn.classList.remove('show'); // 마지막 슬라이드에서는 next 버튼 숨김
+    } else {
+      nextBtn.classList.add('show');
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex -= visibleSlides;
+    if (currentIndex < 0) currentIndex = 0;
+    moveToSlide(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex += visibleSlides;
+    if (currentIndex > slides.length - visibleSlides) currentIndex = slides.length - visibleSlides;
+    moveToSlide(currentIndex);
+  });
+
+  window.addEventListener('resize', updateSliderDimensions);
+
+  updateSliderDimensions(); // 초기 설정
+});
+
+
+// Q&A
 document.querySelectorAll(".accordion-button").forEach((button) => {
   button.addEventListener("click", function () {
     // Toggle the active class on the button
