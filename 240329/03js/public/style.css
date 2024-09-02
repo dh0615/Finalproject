@@ -1,0 +1,26 @@
+@import url("./reset.css");
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+background: linear-gradient(to bottom, #71B280, #134E5E);
+
+}
+svg {
+  width: 1440px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.svg1 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  transform: translate(-48%, -48%);
+  z-index: 1;
+}
+.svg2 {
+  fill: rgba(118, 75, 162, 0.7);
+  transform: translate(-48.1%, -48.1%);
+}
