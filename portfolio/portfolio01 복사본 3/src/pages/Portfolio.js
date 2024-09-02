@@ -13,7 +13,7 @@ const Title = styled.div`
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
-  margin-bottom: 50px;
+  margin: 50px;
   color: #3e64ad;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
@@ -216,7 +216,7 @@ const Portfolio = () => {
   return (
     <div id="portfolio">
       <Wrapper>
-        <Title>03. Portfolio</Title>
+        <Title>Portfolio</Title>
         <TabContainer>
           <TabButton
             onClick={() => handleTabClick("Design")}

@@ -41,7 +41,7 @@ function App() {
       <Cover />
       <About />
       {/* <Introduce /> */}
-      <Skill />
+      {/* <Skill /> */}
       <Portfolio />
       <Contact />
     </>

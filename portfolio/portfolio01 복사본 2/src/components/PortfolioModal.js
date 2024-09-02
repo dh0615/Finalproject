@@ -50,7 +50,7 @@ const Image = styled.img`
 `;
 
 const ViewMoreLink = styled.a`
-  display: inline-block;
+  display: ${(props) => (props.hasLink ? 'inline-block' : 'none')};
   position: relative;
   font-size: 1rem;
   color: #3e64ad;
@@ -79,7 +79,6 @@ const ViewMoreLink = styled.a`
   }
 `;
 
-
 const PortfolioModal = ({ isOpen, onClose, project }) => {
   useEffect(() => {
     if (isOpen) {
@@ -102,9 +101,9 @@ const PortfolioModal = ({ isOpen, onClose, project }) => {
         <h2>{project.title}</h2>
         <Image src={project.img} alt={project.title} />
         <p>{project.desc}</p>
-        <ViewMoreLink href={project.link} target="_blank">
-        View More →
-      </ViewMoreLink>
+        <ViewMoreLink href={project.link} target="_blank" hasLink={!!project.link}>
+          View More →
+        </ViewMoreLink>
       </ModalContent>
     </ModalOverlay>
   );

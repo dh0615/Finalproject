@@ -224,8 +224,8 @@ const About = () => {
             .filter((item) => item.title === title.toLowerCase())
             .map((item) => (
               <Item key={item.id} style={{ 
-                flex: isSkillSection ? '1 1 200px' : 'none',
-                textAlign: isSkillSection ? 'center' : 'left'
+                /* flex: isSkillSection ? '1 1 200px' : 'none',
+                textAlign: isSkillSection ? 'center' : 'left' */
               }}>
                 {item.img && <img src={item.img} alt={item.desc} style={{ width: "auto", height: "50px", marginBottom: '10px' }} />}
                 <p>

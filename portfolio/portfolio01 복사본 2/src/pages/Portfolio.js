@@ -70,7 +70,7 @@ const ProjectPortfolioContainer = styled.div`
   }
 `;
 
-const DesignPortfolioInner = styled.div`
+const PortfolioInner = styled.div`
   border: 1px solid #ddd;
   border-radius: 20px;
   width: calc(50% - 20px);
@@ -80,6 +80,7 @@ const DesignPortfolioInner = styled.div`
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
@@ -88,66 +89,9 @@ const DesignPortfolioInner = styled.div`
   img {
     width: 100%;
     height: auto;
-    max-height: 280px;
-    object-fit: contain;
+    max-height: ${(props) => (props.type === 'design' ? '280px' : '310px')};
+    object-fit: ${(props) => (props.type === 'design' ? 'contain' : 'cover')};
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  h2 {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #3e64ad;
-    font-family: "Montserrat", sans-serif;
-  }
-
-  p {
-    font-size: 1rem;
-    font-family: "Nanum Gothic", sans-serif;
-  }
-
-  @media (max-width: 768px) {
-    width: calc(52% - 20px);
-    img {
-      height: 150px;
-    }
-
-    h2 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 0.8rem;
-    }
-  }
-`;
-
-const ProjectPortfolioInner = styled.div`
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  width: calc(50% - 20px);
-  margin-bottom: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  img {
-    width: 100%;
-    height: auto;
-    max-height: 310px;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     transition: transform 0.3s ease;
   }
 
@@ -236,22 +180,30 @@ const Portfolio = () => {
             {activeTab === "Design" && (
               <DesignPortfolioContainer>
                 {portfolioinnerdesign.map((work) => (
-                  <DesignPortfolioInner key={work.id} onClick={() => handleProjectClick(work)}>
+                  <PortfolioInner
+                    key={work.id}
+                    type="design"
+                    onClick={() => handleProjectClick(work)}
+                  >
                     <img src={work.img} alt={work.title} />
                     <h2>{work.title}</h2>
                     <p>{work.desc}</p>
-                  </DesignPortfolioInner>
+                  </PortfolioInner>
                 ))}
               </DesignPortfolioContainer>
             )}
             {activeTab === "Project" && (
               <ProjectPortfolioContainer>
                 {portfolioinnerproject.map((work) => (
-                  <ProjectPortfolioInner key={work.id} onClick={() => handleProjectClick(work)}>
+                  <PortfolioInner
+                    key={work.id}
+                    type="project"
+                    onClick={() => handleProjectClick(work)}
+                  >
                     <img src={work.img} alt={work.title} />
                     <h2>{work.title}</h2>
                     <p>{work.desc}</p>
-                  </ProjectPortfolioInner>
+                  </PortfolioInner>
                 ))}
               </ProjectPortfolioContainer>
             )}
